@@ -3,9 +3,11 @@
 <ul class="list-group">
 
     <% @restaurants.each do |restaurant| %>
-    <li class="list-group-item"><%= restaurant.name %>
+    <li class="list-group-item mt-1"><%= restaurant.name %>
         <%= link_to 'Show', restaurant_path(restaurant.id), class: "btn btn-success float-right" %>
     </li>
     <% end %>
 
 </ul>
+
+<%= link_to 'Add Restaurant', new_restaurant_path, class: "btn btn-dark mt-3" %>
